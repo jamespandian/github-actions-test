@@ -22,5 +22,3 @@ jobs:
         run: |
           pwd
           ls
-        with:
-          who-to-greet: 'James'
