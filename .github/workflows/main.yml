@@ -6,6 +6,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello world
-        shell: pwsh
-        run: |
-          write-output "Hello World"
+        run:
+         echo "Hello World"
