@@ -8,3 +8,11 @@ jobs:
       - name: Hello world
         run:
          echo "Hello World"
+      - name: Simple Javascript actions
+        id: greet
+        uses: actions/hello-world-javascript-action@v1
+        with:
+          who-to-greet: 'James'
+      - name: Log Greeting time
+        run:
+         echo "${{ steps.greet.output.time}}"
