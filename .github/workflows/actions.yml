@@ -18,5 +18,9 @@ jobs:
         run: echo "${{ steps.greet.outputs.time}}"
       - name: Uses Checkout
         uses: actions/checkout@v3
+      - name: List after checkout
+        run: |
+          pwd
+          ls
         with:
           who-to-greet: 'James'
