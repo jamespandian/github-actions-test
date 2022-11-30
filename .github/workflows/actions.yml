@@ -2,7 +2,7 @@ name: My Checkout
 on: push
 
 jobs:
-  name-of-job:
+  actions-checkout:
     runs-on: ubuntu-latest
     steps:
       - name: List Files
@@ -16,3 +16,7 @@ jobs:
           who-to-greet: 'James'
       - name: Log Greeting time
         run: echo "${{ steps.greet.outputs.time}}"
+      - name: Uses Checkout
+        uses: actions/checkout@v3
+        with:
+          who-to-greet: 'James'
